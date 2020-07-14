@@ -10,7 +10,14 @@ return elements in Last In First Out order.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
 
-   
+   The main difference between an array and a linked list that the elements in 
+   the array can each be accessed individually, and at random, whereas elements 
+   in a linked list must be accessed sequentially. Linked lists makes it more difficult
+   to insert and remove items in the list because of the processing time it takes
+   to move through all the elements sequentially just to get to the one item that
+   is being asked to be returned. Not only that, but the elements in a linked list
+   need to be adjusted based on where the element is being acccessed from since
+   the order and pointers only go one way. 
 """
 
 
