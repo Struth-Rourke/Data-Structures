@@ -25,9 +25,9 @@ return elements in Last In First Out order.
 class ListStack:
 
     def __init__ (self):
-        # Size
+        # size
         self.size = 0
-        # Instantiate empty list
+        # instantiate empty list
         self.storage = []
 
     def __len__(self):
@@ -46,7 +46,7 @@ class ListStack:
 
 # 2. Linked List
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
