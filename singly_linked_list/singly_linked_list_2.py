@@ -1,8 +1,8 @@
 # Creating Class
 class Node(object):
-    def __init__(self, value):
+    def __init__(self, value, next=None):
         self.value = value
-        self.next = None
+        self.next = next
 
     def get_values(self):
         return self.value
@@ -35,6 +35,7 @@ class LinkedList:
             self.head = new_node
             # save to tail
             self.tail = new_node
+            # add count
             self.count += 1
         else:
             # new_node should point to current head
@@ -67,3 +68,42 @@ class LinkedList:
             self.tail = new_node
             # add count
             self.count += 1
+
+    # remove head and return value
+    def remove_head(self):
+        '''
+        Remove head and return the value.
+        '''
+        # if list is empty
+        if not self.head:
+            # return None
+            return None
+        # if lost only has one element
+        if self.head.next is None:
+            # set head_value
+            head_value = self.head.value
+            # head as None
+            self.head = None
+            # tail as None
+            self.tail = None
+            # return head_value
+            return head_value
+
+
+    def contains(self, value):
+        if self.head is None:
+            return False
+        
+        # loop through each node, until we see the value, or we cannot go further
+        current_node = self.head
+
+        while current_node is not None:
+            # check to see if this is the node we are looking for
+            if current_node.value == value:
+                return True
+            
+            # otherwise, go to the next node
+            current_node = current_node.next
+        
+        return False
+
