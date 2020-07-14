@@ -31,17 +31,34 @@ class ListStack:
         self.storage = []
 
     def __len__(self):
-        return len(self.storage)
+        return self.size
 
     def push(self, value):
+        # add size
+        self.size +=1
         # append value
         self.storage.append(value)
+        # # add to front of array
+        # self.storage.insert(0, value)
     
     def pop(self):
         if self.storage:
             return self.storage.pop()
+            # # remove first element in storage
+            # node = self.storage.pop(0)
+            # return node.value
+        # subtract size
+        self.size -= 1
         else:
             return None
+
+        # # alternate code
+        # if len(self.storage) == 0:
+            # return None
+        # # remove first element in storage
+        # self.size -= 1
+        # node = self.storage.pop(0)
+        # return node.value
 
 
 # 2. Linked List

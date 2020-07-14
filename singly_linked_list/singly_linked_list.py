@@ -1,8 +1,8 @@
-# Creating Class
+# Class Node
 class Node(object):
-    def __init__(self, value):
+    def __init__(self, value, next=None):
         self.value = value
-        self.next = None
+        self.next = next
 
     def get_values(self):
         return self.value
@@ -14,6 +14,7 @@ class Node(object):
         self.next = new_next
 
 
+# Class LinkedList
 class LinkedList:
     def __init__(self):
         self.count = 0
@@ -27,15 +28,20 @@ class LinkedList:
         # Instantiate 'new_node'
         new_node = Node(value)
 
-        # If the list is empty, save to both the head and tail
+        # If the list is empty
         if self.head is None:
+            # save to head
             self.head = new_node
+            # save to tail
             self.tail = new_node
+            # add count
             self.count += 1
         else:
-            # append it to the tail
+            # set next as new_node
             self.tail.next = new_node
+            # move tail to new_node
             self.tail = new_node
+            # add count
             self.count += 1
 
     def contains(self, value):

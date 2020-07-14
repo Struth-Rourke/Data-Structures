@@ -4,15 +4,6 @@ class Node(object):
         self.value = value
         self.next = next
 
-    # def get_values(self):
-    #     return self.value
-
-    # def get_next(self):
-    #     return self.next
-
-    # def set_next(self, new_next):
-    #     self.next = new_next
-
 
 class LinkedList:
     def __init__(self):
@@ -84,9 +75,6 @@ class LinkedList:
 
     # remove head and return value
     def remove_head(self):
-        '''
-        Remove head and return the value.
-        '''
         # if list is empty
         if not self.head:
             # return None
@@ -99,9 +87,14 @@ class LinkedList:
             self.head = None
             # tail as None
             self.tail = None
+            # subtract count
+            self.count -= 1
             # return head_value
             return head_value
-
+        # otherwise we have more elements in the list
+        head_value = self.head.value
+        self.head = self.head.next
+        return head_value
 
     def contains(self, value):
         if self.head is None:
