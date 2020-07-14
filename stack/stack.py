@@ -58,7 +58,7 @@ class ListStack:
         # # remove first element in storage
         # self.size -= 1
         # node = self.storage.pop(0)
-        # return node.value
+        # return node
 
 
 # 2. Linked List
