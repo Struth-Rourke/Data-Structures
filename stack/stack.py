@@ -47,10 +47,10 @@ class ListStack:
             # # remove first element in storage
             # node = self.storage.pop(0)
             # return node.value
-        # subtract size
-        self.size -= 1
         else:
             return None
+        # subtract size
+        self.size -= 1
 
         # # alternate code
         # if len(self.storage) == 0:

@@ -39,15 +39,13 @@ class LinkedList:
             self.head = new_node
             # save to tail
             self.tail = new_node
-            # add count
-            self.count += 1
         else:
             # new_node should point to current head
             new_node.next = self.head
             # move head to new_node
             self.head = new_node
-            # add count
-            self.count += 1
+        # add count
+        self.count += 1
 
     
     def add_to_tail(self, value):
@@ -63,15 +61,13 @@ class LinkedList:
             self.head = new_node
             # save to tail
             self.tail = new_node
-            # add count
-            self.count += 1
         else:
             # point node at the current tail to new_node
             self.tail.next = new_node
             # move tail to new_node
             self.tail = new_node
-            # add count
-            self.count += 1
+        # add count
+        self.count += 1
 
     # remove head and return value
     def remove_head(self):

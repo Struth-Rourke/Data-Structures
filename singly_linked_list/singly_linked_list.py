@@ -44,6 +44,7 @@ class LinkedList:
             # add count
             self.count += 1
 
+
     def contains(self, value):
         # check if list is present
         if self.head is None:
