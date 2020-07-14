@@ -1,17 +1,17 @@
 # Creating Class
 class Node(object):
-    def __init__(self, value, next=None):
+    def __init__(self, value=None, next=None):
         self.value = value
         self.next = next
 
-    def get_values(self):
-        return self.value
+    # def get_values(self):
+    #     return self.value
 
-    def get_next(self):
-        return self.get_next
+    # def get_next(self):
+    #     return self.next
 
-    def set_next(self, new_next):
-        self.next = new_next
+    # def set_next(self, new_next):
+    #     self.next = new_next
 
 
 class LinkedList:
@@ -22,10 +22,23 @@ class LinkedList:
         # last node in the list
         self.tail = None
 
+    # return all the values in the lsit a -> b -> c -> None
+    def __str__(self):
+        # instantiate empy string
+        output = ""
+        
+        # Create tracker node variable
+        current_node = self.head 
+        
+        # loop until it is None
+        while current_node is not None:
+            # updating 'output' string with format
+            output += f"{current_node.value} -> "
+            # update the tracker to the next node
+            current_node = current_node.next
+
+
     def add_to_head(self, value):
-        '''
-        Add a new Node to the tail of the list.
-        '''
         # instantiate 'new_node'
         new_node = Node(value)
 
